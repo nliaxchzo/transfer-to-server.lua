@@ -1,8 +1,8 @@
-ENT.Base 			= 'base_ai'
-ENT.Type 			= 'ai'
+ENT.Base 		= 'base_ai'
+ENT.Type 		= 'ai'
 ENT.PrintName		= 'script'
-ENT.Author 			= 'senpachz'
-ENT.Contact	 		= ''
+ENT.Author 		= 'senpachz'
+ENT.Contact	 	= ''
 ENT.Category 		= 'senpachz-script'
 ENT.Spawnable 		= true
 ENT.AdminSpawnable 	= true
@@ -10,7 +10,7 @@ ENT.AdminSpawnable 	= true
 if SERVER then
 AddCSLuaFile()
 function ENT:Initialize()
-	self:SetModel("models/Humans/Group02/male_06.mdl")
+	self:SetModel("models/Humans/Group02/male_06.mdl") -- модель
 	self:SetHullType(HULL_HUMAN)
 	self:SetHullSizeNormal()
 	self:SetNPCState(NPC_STATE_SCRIPT)
@@ -30,8 +30,6 @@ end
 
 elseif CLIENT then
 
-
-
 surface.CreateFont('script.senpachz.fonts', {
 	size = 64,
 	weight = 350,
@@ -39,8 +37,6 @@ surface.CreateFont('script.senpachz.fonts', {
 	extended = true,
 	font = "Roboto"
 })
-
-
 
 function ENT:Draw()
 	self:DrawModel()
